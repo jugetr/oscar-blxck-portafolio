@@ -1,0 +1,4 @@
+# Placeholder mientras el portafolio usa fotos de relleno.
+# Cuando entren las fotos reales de Oscar, cambiar a: Allow: /
+User-agent: *
+Disallow: /

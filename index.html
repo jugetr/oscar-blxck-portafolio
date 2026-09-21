@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oscar Blxck — Tatuador en Bogotá | Blackwork Ilustrativo</title>
+<meta name="description" content="Tatuador en Bogotá con más de 7 años de trayectoria. Blackwork ilustrativo, neotradicional, minimalista y sombras. Diseño propio, dibujado a mano.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;500;600;700;900&family=Inter+Tight:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ══════════════ SELECTOR DE IDIOMA ══════════════ -->
+<div class="langgate" id="langgate" role="dialog" aria-modal="true" aria-label="Escoge tu idioma">
+  <div class="langgate-box">
+    <span class="mark">Oscar Blxck</span>
+    <span class="bar"></span>
+    <h2 class="lbl" style="font-size:14px" data-i18n="lang.title">Escoge tu idioma</h2>
+    <div class="langbtns" id="langbtns"></div>
+    <p class="small" data-i18n="lang.note">Puedes cambiarlo después desde el menú.</p>
+  </div>
+</div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="hdr" id="hdr">
+  <a href="#top" class="brand" style="font-size:16px">Oscar Blxck</a>
+
+  <nav class="navcenter" style="flex:1;display:flex;align-items:center;justify-content:center;gap:28px">
+    <button class="navlink hasmega on" id="megaBtn" aria-expanded="false" aria-controls="mega">
+      <span data-i18n="nav.portfolio">Portafolio</span>
+      <svg class="caret" width="9" height="6" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5 5 5.5 9 1.5"/></svg>
+    </button>
+    <a class="navlink" href="#sobre" data-i18n="nav.about">Sobre mí</a>
+    <a class="navlink" href="#proceso" data-i18n="nav.process">Proceso</a>
+    <a class="navlink" href="#disenos" data-i18n="nav.designs">Diseños</a>
+    <a class="navlink" href="#merch" data-i18n="nav.merch">Merch</a>
+    <a class="navlink" href="#preguntas" data-i18n="nav.faq">Preguntas</a>
+    <a class="navlink" href="#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+
+  <div style="display:flex;align-items:center;gap:8px">
+    <div class="langsw desktop-only" id="langsw" role="group" aria-label="Idioma"></div>
+    <button class="icobtn" type="button" id="favBtn" data-i18n-aria="nav.saved" aria-label="Piezas guardadas">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.6-7-9.6A3.9 3.9 0 0 1 12 7.8 3.9 3.9 0 0 1 19 10.4c0 5-7 9.6-7 9.6Z"/></svg>
+      <span class="count" id="favCount">0</span>
+    </button>
+    <a class="icobtn desktop-only" href="https://www.instagram.com/_oscarblxck_/" aria-label="Instagram">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.9"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <button class="icobtn" type="button" id="drawerBtn" data-i18n-aria="nav.menu" aria-label="Abrir menú" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════ MEGA DROPDOWN DE PORTAFOLIO ══════════════ -->
+<div class="mega" id="mega" role="region" aria-label="Portafolio por estilo">
+  <div class="mega-grid">
+    <a class="mega-card" href="#portafolio" data-jump="blackwork">
+      <div class="shot"><img src="assets/img/est-blackwork.jpg" alt="Blackwork ilustrativo" loading="lazy"></div>
+      <div class="mega-meta"><span class="num">01</span>
+        <span class="lbl" data-i18n="style.blackwork">Blackwork ilustrativo</span>
+        <span class="small" data-i18n="style.blackwork.desc">Negro sólido, línea firme, composición que se lee de lejos.</span></div>
+    </a>
+    <a class="mega-card" href="#portafolio" data-jump="neo">
+      <div class="shot"><img src="assets/img/est-neo.jpg" alt="Neotradicional" loading="lazy"></div>
+      <div class="mega-meta"><span class="num">02</span>
+        <span class="lbl" data-i18n="style.neo">Neotradicional</span>
+        <span class="small" data-i18n="style.neo.desc">Contorno marcado y paleta de color rica en detalle.</span></div>
+    </a>
+    <a class="mega-card" href="#portafolio" data-jump="minimal">
+      <div class="shot"><img src="assets/img/est-flash.jpg" alt="Minimalista" loading="lazy"></div>
+      <div class="mega-meta"><span class="num">03</span>
+        <span class="lbl" data-i18n="style.minimal">Minimalista</span>
+        <span class="small" data-i18n="style.minimal.desc">Trazo limpio, poco elemento, mucha intención.</span></div>
+    </a>
+    <a class="mega-card" href="#portafolio" data-jump="shadow">
+      <div class="shot"><img src="assets/img/est-real.jpg" alt="Sombras" loading="lazy"></div>
+      <div class="mega-meta"><span class="num">04</span>
+        <span class="lbl" data-i18n="style.shadow">Sombras</span>
+        <span class="small" data-i18n="style.shadow.desc">Negro y gris, volumen y degradado suave.</span></div>
+    </a>
+  </div>
+  <div class="mega-foot">
+    <a class="btn btn-sm" href="#portafolio" data-jump="all"><span data-i18n="nav.allWork">Ver todo el trabajo</span>
+      <svg width="15" height="11" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 9h21M16 2l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="assets/img/hero.jpg" alt="Brazos completamente tatuados sobre fondo negro"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <h1><span class="l1">Oscar</span><span class="l2">Blxck</span></h1>
+    <div class="rule"></div>
+    <p class="lbl" style="font-size:14px;letter-spacing:.20em" data-i18n="hero.tagline">Dibujado antes de tatuar.</p>
+    <p class="body" style="margin-top:8px;font-size:15px" data-i18n="hero.sub">Blackwork ilustrativo, neotradicional, minimalista y sombras. Bogotá.</p>
+    <div style="display:flex;align-items:center;gap:14px;margin-top:32px;flex-wrap:wrap">
+      <a class="btn btn-y" href="#portafolio"><span data-i18n="hero.cta1">Ver portafolio</span>
+        <svg width="17" height="13" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 9h21M16 2l7 7-7 7"/></svg>
+      </a>
+      <button class="btn" type="button" data-open-sheet><span data-i18n="hero.cta2">Cotizar</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="slidecount">
+    <span class="num">01</span>
+    <span style="width:60px;height:1px;background:var(--line2)"></span>
+    <span class="num" style="color:var(--dim)">04</span>
+  </div>
+  <span class="eyebrow vert" data-i18n="hero.place">Bogotá · Colombia</span>
+  <div class="scrollhint">
+    <span data-i18n="hero.scroll">Scroll</span>
+    <svg width="13" height="16" viewBox="0 0 14 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1v14M2 10l5 5 5-5"/></svg>
+  </div>
+</section>
+
+<!-- ══════════════ EXPLORA EL TRABAJO (mismos 4 estilos) ══════════════ -->
+<section class="sec rev" id="estilos" style="background:var(--bg2);border-bottom:1px solid var(--line)">
+  <div class="sec-head">
+    <h2 class="sectitle" data-i18n="work.title">Explora el trabajo</h2>
+    <p class="small" style="max-width:320px;text-align:right" data-i18n="work.note">Ordenado por estilo, no por fecha.</p>
+  </div>
+  <div class="styles">
+    <a class="stile" href="#portafolio" data-jump="blackwork">
+      <div class="stile-head"><span class="num">01</span>
+        <div class="stile-row"><span class="lbl" data-i18n="style.blackwork">Blackwork ilustrativo</span>
+          <svg class="arw" width="15" height="12" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 9h21M16 2l7 7-7 7"/></svg></div></div>
+      <div class="shot"><img src="assets/img/est-blackwork.jpg" alt="Blackwork ilustrativo" loading="lazy"></div>
+    </a>
+    <a class="stile" href="#portafolio" data-jump="neo">
+      <div class="stile-head"><span class="num">02</span>
+        <div class="stile-row"><span class="lbl" data-i18n="style.neo">Neotradicional</span>
+          <svg class="arw" width="15" height="12" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 9h21M16 2l7 7-7 7"/></svg></div></div>
+      <div class="shot"><img src="assets/img/est-neo.jpg" alt="Neotradicional" loading="lazy"></div>
+    </a>
+    <a class="stile" href="#portafolio" data-jump="minimal">
+      <div class="stile-head"><span class="num">03</span>
+        <div class="stile-row"><span class="lbl" data-i18n="style.minimal">Minimalista</span>
+          <svg class="arw" width="15" height="12" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 9h21M16 2l7 7-7 7"/></svg></div></div>
+      <div class="shot"><img src="assets/img/est-flash.jpg" alt="Minimalista" loading="lazy"></div>
+    </a>
+    <a class="stile" href="#portafolio" data-jump="shadow">
+      <div class="stile-head"><span class="num">04</span>
+        <div class="stile-row"><span class="lbl" data-i18n="style.shadow">Sombras</span>
+          <svg class="arw" width="15" height="12" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 9h21M16 2l7 7-7 7"/></svg></div></div>
+      <div class="shot"><img src="assets/img/est-real.jpg" alt="Sombras" loading="lazy"></div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ SOBRE MÍ ══════════════ -->
+<section class="sec rev" id="sobre" style="border-bottom:1px solid var(--line)">
+  <div class="about">
+    <div class="shot">
+      <img src="assets/img/retrato.jpg" alt="Retrato de Oscar en el estudio" loading="lazy">
+      <span class="phtag" data-i18n="about.photo">[Foto de Oscar]</span>
+    </div>
+    <div>
+      <div class="kicker"><span>01</span><span class="dash"></span>
+        <span class="eyebrow" data-i18n="about.eyebrow">Quién te va a tatuar</span></div>
+      <h2 class="brand" style="font-size:40px;font-weight:700;letter-spacing:.10em" data-i18n="about.title">Sobre mí</h2>
+      <p class="body" style="margin-top:22px;font-size:15px;max-width:640px" data-i18n="about.p1">Soy Oscar, tatuador en Bogotá.</p>
+      <p class="body" style="margin-top:14px;font-size:15px;max-width:640px" data-i18n="about.p2"></p>
+      <p class="body" style="margin-top:14px;font-size:15px;max-width:640px;color:var(--soft)" data-i18n="about.p3"></p>
+      <div class="aboutstats">
+        <div><b>+7</b><span class="small" data-i18n="about.stat1">años tatuando</span></div>
+        <div><b>4</b><span class="small" data-i18n="about.stat2">estilos de trabajo</span></div>
+        <div><b>100%</b><span class="small" data-i18n="about.stat3">diseño propio</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROCESO ══════════════ -->
+<section class="split rev" id="proceso">
+  <div class="split-main">
+    <div class="bgimg"><img src="assets/img/proceso.jpg" alt="Tatuador trabajando en el estudio" loading="lazy"></div>
+    <div class="veil"></div>
+    <div class="in">
+      <div class="kicker"><span>02</span><span class="dash"></span>
+        <span class="eyebrow" data-i18n="nav.process">Proceso</span></div>
+      <h2 class="brand" style="font-size:36px;font-weight:700;line-height:1.14;letter-spacing:.08em" data-i18n="process.title">Diseñado antes de tatuar</h2>
+      <p class="body" style="margin-top:18px" data-i18n="process.lead"></p>
+      <a class="btn" href="#preguntas" style="margin-top:26px"><span data-i18n="process.cta">Cómo funciona</span>
+        <svg width="17" height="13" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 9h21M16 2l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <span class="phtag" style="bottom:16px;left:48px;right:auto">[Foto del estudio]</span>
+  </div>
+  <div class="split-side">
+    <div class="feat">
+      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 3.5 20.5 7.5 9 19H5v-4z"/><path d="M14.5 5.5 18.5 9.5"/></svg>
+      <div><h3 class="lbl" style="font-size:12px" data-i18n="process.f1">Diseño propio</h3>
+        <p class="small" style="margin-top:5px" data-i18n="process.f1d"></p></div>
+    </div>
+    <div class="feat">
+      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2.5 6 3.5 8 3.5v6c0 4.5-3.5 7.5-8 9.5-4.5-2-8-5-8-9.5v-6c2 0 5-1 8-3.5Z"/><path d="m8.8 12.2 2.2 2.2 4.2-4.4"/></svg>
+      <div><h3 class="lbl" style="font-size:12px" data-i18n="process.f2">Material de primera calidad</h3>
+        <p class="small" style="margin-top:5px" data-i18n="process.f2d"></p></div>
+    </div>
+    <div class="feat">
+      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>
+      <div><h3 class="lbl" style="font-size:12px" data-i18n="process.f3">Boceto previo</h3>
+        <p class="small" style="margin-top:5px" data-i18n="process.f3d"></p></div>
+    </div>
+    <div class="feat">
+      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16v12H4z"/><path d="M9 8V5h6v3M12 12v4M10 14h4"/></svg>
+      <div><h3 class="lbl" style="font-size:12px" data-i18n="process.f4">Kit de curación incluido</h3>
+        <p class="small" style="margin-top:5px" data-i18n="process.f4d"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PASOS ══════════════ -->
+<section class="sec rev" style="background:var(--bg2);border-bottom:1px solid var(--line)">
+  <div class="sec-head">
+    <h2 class="sectitle" data-i18n="steps.title">Del boceto a la piel</h2>
+    <p class="small" data-i18n="steps.note">Cuatro pasos. Sin sorpresas.</p>
+  </div>
+  <div class="steps">
+    <article class="step">
+      <div class="shot"><img src="assets/img/stencil.jpg" alt="Recortando el stencil" loading="lazy"></div>
+      <div class="step-body"><span class="num">01</span>
+        <h3 class="lbl" style="font-size:13px;margin-top:10px" data-i18n="steps.s1">Me escribes</h3>
+        <p class="small" style="margin-top:8px" data-i18n="steps.s1d"></p></div>
+    </article>
+    <article class="step">
+      <div class="shot"><img src="assets/img/proceso.jpg" alt="Mesa de trabajo" loading="lazy"></div>
+      <div class="step-body"><span class="num">02</span>
+        <h3 class="lbl" style="font-size:13px;margin-top:10px" data-i18n="steps.s2">Cotizo</h3>
+        <p class="small" style="margin-top:8px" data-i18n="steps.s2d"></p></div>
+    </article>
+    <article class="step">
+      <div class="shot"><img src="assets/img/aguja.jpg" alt="Revisión del diseño" loading="lazy"></div>
+      <div class="step-body"><span class="num">03</span>
+        <h3 class="lbl" style="font-size:13px;margin-top:10px" data-i18n="steps.s3">Reviso el boceto contigo</h3>
+        <p class="small" style="margin-top:8px" data-i18n="steps.s3d"></p></div>
+    </article>
+    <article class="step last">
+      <div class="shot"><img src="assets/img/p6.jpg" alt="Tatuaje terminado" loading="lazy"></div>
+      <div class="step-body"><span class="num">04</span>
+        <h3 class="lbl" style="font-size:13px;margin-top:10px" data-i18n="steps.s4">Nos vemos</h3>
+        <p class="small" style="margin-top:8px;color:var(--mute)" data-i18n="steps.s4d"></p></div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════ PORTAFOLIO ══════════════ -->
+<section class="sec rev" id="portafolio" style="border-bottom:1px solid var(--line)">
+  <div class="sec-head">
+    <div>
+      <div class="kicker"><span>03</span><span class="dash"></span>
+        <span class="eyebrow" data-i18n="nav.portfolio">Portafolio</span></div>
+      <h2 class="sectitle" data-i18n="pf.title">Portafolio</h2>
+    </div>
+    <p class="small" id="tally">11 piezas</p>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filtrar por estilo">
+    <button class="chip" type="button" data-filter="all" aria-pressed="true"><span data-i18n="pf.all">Todo</span> <b>11</b></button>
+    <button class="chip" type="button" data-filter="blackwork" aria-pressed="false"><span data-i18n="style.blackwork">Blackwork ilustrativo</span> <b>3</b></button>
+    <button class="chip" type="button" data-filter="neo" aria-pressed="false"><span data-i18n="style.neo">Neotradicional</span> <b>2</b></button>
+    <button class="chip" type="button" data-filter="minimal" aria-pressed="false"><span data-i18n="style.minimal">Minimalista</span> <b>3</b></button>
+    <button class="chip" type="button" data-filter="shadow" aria-pressed="false"><span data-i18n="style.shadow">Sombras</span> <b>3</b></button>
+  </div>
+
+  <div class="masonry" id="grid">
+    <!-- las piezas las inyecta app.js desde PIECES -->
+  </div>
+
+  <div class="empty" id="empty" hidden>
+    <p class="body" data-i18n="pf.empty">Todavía no hay piezas publicadas en este estilo.</p>
+    <button class="btn" type="button" data-filter="all" style="margin-top:18px"><span data-i18n="pf.seeAll">Ver todo</span></button>
+  </div>
+</section>
+
+<!-- ══════════════ DISEÑOS DISPONIBLES ══════════════ -->
+<section class="sec rev" id="disenos" style="background:var(--bg2);border-bottom:1px solid var(--line)">
+  <div class="kicker"><span>04</span><span class="dash"></span>
+    <span class="eyebrow" data-i18n="des.title">Diseños disponibles</span></div>
+  <div class="sec-head" style="margin-bottom:22px">
+    <div>
+      <div class="hook"><h2 data-i18n="des.hook">¿No sabes qué tatuarte?</h2></div>
+      <p class="body" style="max-width:520px" data-i18n="des.note"></p>
+    </div>
+    <div class="arrows">
+      <button class="arrow" type="button" id="railPrev" aria-label="Anterior">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="arrow" type="button" id="railNext" aria-label="Siguiente">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="rail" id="rail"><!-- inyectado por app.js --></div>
+</section>
+
+<!-- ══════════════ MERCH ══════════════ -->
+<section class="sec rev" id="merch" style="border-bottom:1px solid var(--line)">
+  <div class="kicker"><span>05</span><span class="dash"></span>
+    <span class="eyebrow" data-i18n="merch.title">Merch</span></div>
+  <div class="sec-head" style="margin-bottom:22px">
+    <h2 class="sectitle" data-i18n="merch.title">Merch</h2>
+    <p class="small" style="max-width:340px;text-align:right" data-i18n="merch.note"></p>
+  </div>
+  <div class="merch" id="merchGrid"><!-- inyectado por app.js --></div>
+  <div class="disclaimer" style="margin-top:20px;max-width:620px">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v.5M12 11.5v5"/></svg>
+    <p data-i18n="merch.disclaimer"></p>
+  </div>
+</section>
+
+<!-- ══════════════ PREGUNTAS ══════════════ -->
+<section class="sec rev" id="preguntas" style="background:var(--bg2);border-bottom:1px solid var(--line)">
+  <div class="kicker"><span>06</span><span class="dash"></span>
+    <span class="eyebrow" data-i18n="faq.title">Preguntas frecuentes</span></div>
+  <div class="sec-head"><h2 class="sectitle" data-i18n="faq.title">Preguntas frecuentes</h2></div>
+  <div class="acc" id="acc"><!-- inyectado por app.js --></div>
+</section>
+
+<!-- ══════════════ AGENDA ══════════════ -->
+<section class="split rev" id="agenda">
+  <div class="split-main" style="min-height:300px">
+    <div class="bgimg"><img src="assets/img/p5.jpg" alt="Tatuaje terminado" loading="lazy"></div>
+    <div class="veil"></div>
+    <div class="in">
+      <h2 class="brand" style="font-size:28px;font-weight:700;letter-spacing:.12em" data-i18n="book.title">Cuéntame tu idea</h2>
+      <p class="body" style="margin-top:14px" data-i18n="book.body"></p>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:24px;flex-wrap:wrap">
+        <button class="btn btn-y" type="button" data-open-sheet>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          <span data-i18n="book.cta">Armar mi cotización</span>
+        </button>
+        <div style="display:flex;align-items:center;gap:9px">
+          <span style="width:7px;height:7px;border-radius:99px;background:var(--y)"></span>
+          <span class="small" style="color:var(--mute)"><span data-i18n="book.open">Agenda abierta</span> · [MES / MES]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="split-side" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 26px;align-content:center">
+    <div style="display:flex;gap:11px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--y)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M16.5 3.5 20.5 7.5 9 19H5v-4z"/></svg>
+      <div><h4 class="lbl" style="font-size:11px" data-i18n="book.t1">Diseño propio</h4>
+        <p class="small" style="margin-top:4px;font-size:11.5px" data-i18n="book.t1d"></p></div>
+    </div>
+    <div style="display:flex;gap:11px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--y)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M12 3c3 2.5 6 3.5 8 3.5v6c0 4.5-3.5 7.5-8 9.5-4.5-2-8-5-8-9.5v-6c2 0 5-1 8-3.5Z"/></svg>
+      <div><h4 class="lbl" style="font-size:11px" data-i18n="book.t2">Material certificado</h4>
+        <p class="small" style="margin-top:4px;font-size:11.5px" data-i18n="book.t2d"></p></div>
+    </div>
+    <div style="display:flex;gap:11px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--y)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3.5 2"/></svg>
+      <div><h4 class="lbl" style="font-size:11px" data-i18n="book.t3">Respuesta en 24 h</h4>
+        <p class="small" style="margin-top:4px;font-size:11.5px" data-i18n="book.t3d"></p></div>
+    </div>
+    <div style="display:flex;gap:11px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--y)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M4 8h16v12H4z"/><path d="M9 8V5h6v3"/></svg>
+      <div><h4 class="lbl" style="font-size:11px" data-i18n="book.t4">Kit de curación</h4>
+        <p class="small" style="margin-top:4px;font-size:11.5px" data-i18n="book.t4d"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACTO ══════════════ -->
+<section class="sec rev" id="contacto">
+  <div class="kicker"><span>07</span><span class="dash"></span>
+    <span class="eyebrow" data-i18n="contact.title">Contacto</span></div>
+  <div class="sec-head" style="margin-bottom:22px">
+    <h2 class="sectitle" data-i18n="contact.title">Contacto</h2>
+    <p class="small" data-i18n="contact.note"></p>
+  </div>
+
+  <div class="contact">
+    <a class="ccard" href="mailto:oscarblxck@gmail.com">
+      <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg></span>
+      <span class="eyebrow" style="font-size:10px" data-i18n="contact.email">Correo</span>
+      <span class="val">oscarblxck@gmail.com</span>
+    </a>
+
+    <a class="ccard" href="https://wa.me/573160403424">
+      <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg></span>
+      <span class="eyebrow" style="font-size:10px" data-i18n="contact.wa">WhatsApp</span>
+      <span class="val">316 040 3424</span>
+    </a>
+
+    <a class="ccard" href="https://www.instagram.com/_oscarblxck_/">
+      <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.9"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg></span>
+      <span class="eyebrow" style="font-size:10px" data-i18n="contact.ig">Instagram</span>
+      <span class="val">@_oscarblxck_</span>
+    </a>
+
+    <div class="ccard" style="grid-column:span 2">
+      <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+      <span class="eyebrow" style="font-size:10px" data-i18n="contact.address">Dirección</span>
+      <span class="val" data-i18n="contact.addressVal">Avenida 15 # 124-67, oficina 116
+Edificio Oficentro, Bogotá</span>
+      <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida%2015%20%23%20124-67%20Edificio%20Oficentro%20Bogota" target="_blank" rel="noopener">
+        <span data-i18n="contact.maps">Abrir en Google Maps</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+    <div class="ccard">
+      <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3.5 2"/></svg></span>
+      <span class="eyebrow" style="font-size:10px" data-i18n="contact.hours">Horario</span>
+      <span class="val" data-i18n="contact.hoursVal">Lunes a viernes
+10:00 am – 7:00 pm</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="ftr">
+  <a href="#top" class="brand" style="font-size:13px">Oscar Blxck</a>
+  <nav style="flex:1;display:flex;align-items:center;gap:26px;flex-wrap:wrap">
+    <a class="navlink" href="#portafolio" data-i18n="nav.portfolio">Portafolio</a>
+    <a class="navlink" href="#sobre" data-i18n="nav.about">Sobre mí</a>
+    <a class="navlink" href="#disenos" data-i18n="nav.designs">Diseños</a>
+    <a class="navlink" href="#merch" data-i18n="nav.merch">Merch</a>
+    <a class="navlink" href="#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:8px">
+    <a class="icobtn" href="https://www.instagram.com/_oscarblxck_/" aria-label="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.9"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a class="icobtn" href="https://wa.me/573160403424" aria-label="WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+    </a>
+    <a class="icobtn" href="mailto:oscarblxck@gmail.com" aria-label="Correo">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+    </a>
+  </div>
+  <span class="small" style="font-size:11px;color:var(--faint)" data-i18n="ftr.rights">© 2026 Oscar Blxck · Bogotá · Mayores de 18 años</span>
+</footer>
+
+<!-- ══════════════ LIGHTBOX ══════════════ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Detalle de la pieza" hidden>
+  <button class="lb-close" type="button" id="lbClose" data-i18n-aria="lb.close" aria-label="Cerrar">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="lb-nav lb-prev" type="button" id="lbPrev" data-i18n-aria="lb.prev" aria-label="Pieza anterior">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lb-nav lb-next" type="button" id="lbNext" data-i18n-aria="lb.next" aria-label="Pieza siguiente">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5l7 7-7 7"/></svg>
+  </button>
+  <div class="lb-box">
+    <div class="lb-img"><img id="lbImg" src="" alt=""></div>
+    <div class="lb-side">
+      <div>
+        <span class="num" id="lbIndex">01 / 11</span>
+        <h3 class="brand" id="lbTitle" style="font-size:20px;font-weight:700;letter-spacing:.12em;margin-top:10px">—</h3>
+      </div>
+      <div class="lb-spec">
+        <div><span class="small" data-i18n="lb.style">Estilo</span><span class="lbl" style="font-size:11px" id="lbStyle">—</span></div>
+        <div><span class="small" data-i18n="lb.zone">Zona</span><span class="lbl" style="font-size:11px" id="lbZone">—</span></div>
+        <div><span class="small" data-i18n="lb.sessions">Sesiones</span><span class="lbl" style="font-size:11px" id="lbSessions">—</span></div>
+        <div style="border-bottom:none"><span class="small" data-i18n="lb.time">Tiempo total</span><span class="lbl" style="font-size:11px" id="lbTime">—</span></div>
+      </div>
+      <p class="small" data-i18n="lb.note"></p>
+      <button class="btn btn-y" type="button" id="lbCta" style="width:100%;justify-content:center;gap:14px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+        <span data-i18n="lb.cta">Quiero algo así</span>
+      </button>
+      <p class="small" style="font-size:11px;color:var(--faint);text-align:center" data-i18n="lb.ctaNote"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FAB + COTIZADOR ══════════════ -->
+<button class="fab" type="button" id="fab" data-open-sheet>
+  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+  <span data-i18n="hero.cta2">Cotizar</span>
+</button>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="false" aria-label="Armar cotización">
+  <div class="sheet-head">
+    <div>
+      <h3 class="lbl" style="font-size:13px" data-i18n="sheet.title">Armemos tu cotización</h3>
+      <p class="small" style="margin-top:6px" data-i18n="sheet.note"></p>
+    </div>
+    <button class="icobtn" type="button" id="sheetClose" data-i18n-aria="nav.close" aria-label="Cerrar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+  <div class="sheet-body">
+    <div class="field">
+      <span class="eyebrow" style="font-size:10px">01 · <span data-i18n="sheet.step1">Estilo</span></span>
+      <div class="opts" id="optStyle"></div>
+    </div>
+    <div class="field">
+      <span class="eyebrow" style="font-size:10px">02 · <span data-i18n="sheet.step2">Zona del cuerpo</span></span>
+      <div class="opts" id="optZone"></div>
+    </div>
+    <div class="field">
+      <label class="eyebrow" style="font-size:10px" for="sizeInp">03 · <span data-i18n="sheet.step3">Tamaño aproximado</span></label>
+      <input class="inp" id="sizeInp" type="text" inputmode="numeric" data-i18n-ph="sheet.sizePh" placeholder="Ej: 15 cm de alto">
+      <span class="small" style="font-size:11px" data-i18n="sheet.sizeHint"></span>
+    </div>
+    <div class="field">
+      <span class="eyebrow" style="font-size:10px">04 · <span data-i18n="sheet.step4">Referencias</span></span>
+      <label class="filebtn" for="refsInp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        <span data-i18n="sheet.refsBtn">Escoger imágenes</span>
+      </label>
+      <input id="refsInp" type="file" accept="image/*" multiple hidden>
+      <span class="small" style="font-size:11px" id="refsOut" data-i18n="sheet.refsNone">Ninguna seleccionada</span>
+      <span class="small" style="font-size:11px" data-i18n="sheet.refsHint"></span>
+    </div>
+    <div class="disclaimer">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v.5M12 11.5v5"/></svg>
+      <p data-i18n="sheet.disclaimer"></p>
+    </div>
+    <div class="field">
+      <span class="eyebrow" style="font-size:10px">05 · <span data-i18n="sheet.step5">Vista previa</span></span>
+      <p class="preview" id="preview"></p>
+    </div>
+    <a class="btn btn-y" id="sheetSend" href="https://wa.me/573160403424" style="justify-content:center;gap:14px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      <span data-i18n="sheet.send">Abrir WhatsApp</span>
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════ DRAWER MÓVIL ══════════════ -->
+<div class="drawer" id="drawer">
+  <div class="drawer-veil" data-close-drawer></div>
+  <div class="drawer-panel">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <span class="brand" style="font-size:13px">Oscar Blxck</span>
+      <button class="icobtn" type="button" data-close-drawer data-i18n-aria="nav.close" aria-label="Cerrar menú">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <div class="langsw" id="langswM" style="align-self:flex-start" role="group" aria-label="Idioma"></div>
+    <nav class="drawer-links">
+      <a href="#portafolio" data-close-drawer data-i18n="nav.portfolio">Portafolio</a>
+      <a class="sub" href="#portafolio" data-jump="blackwork" data-close-drawer data-i18n="style.blackwork">Blackwork ilustrativo</a>
+      <a class="sub" href="#portafolio" data-jump="neo" data-close-drawer data-i18n="style.neo">Neotradicional</a>
+      <a class="sub" href="#portafolio" data-jump="minimal" data-close-drawer data-i18n="style.minimal">Minimalista</a>
+      <a class="sub" href="#portafolio" data-jump="shadow" data-close-drawer data-i18n="style.shadow">Sombras</a>
+      <a href="#sobre" data-close-drawer data-i18n="nav.about">Sobre mí</a>
+      <a href="#proceso" data-close-drawer data-i18n="nav.process">Proceso</a>
+      <a href="#disenos" data-close-drawer data-i18n="nav.designs">Diseños</a>
+      <a href="#merch" data-close-drawer data-i18n="nav.merch">Merch</a>
+      <a href="#preguntas" data-close-drawer data-i18n="nav.faq">Preguntas</a>
+      <a href="#contacto" data-close-drawer data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:14px">
+      <button class="btn btn-y" type="button" data-open-sheet style="justify-content:center">
+        <span data-i18n="book.cta">Armar mi cotización</span></button>
+      <p class="small pre" data-i18n="contact.addressVal"></p>
+      <p class="small pre" data-i18n="contact.hoursVal"></p>
+    </div>
+  </div>
+</div>
+
+<button class="totop" type="button" id="totop" data-i18n-aria="toast.top" aria-label="Volver arriba">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
